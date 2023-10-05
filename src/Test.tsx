@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "./App.css";
 
-function App() {
+function Test() {
   const [data, setData] = useState<any>(null);
 
   const callSearchAPI = () => {
-    fetch("/search?q=javascript")
+    fetch("https://www.google.com/search?q=javascript")
       .then((resp) => {
         setData(resp);
         console.log(resp);
@@ -19,7 +19,7 @@ function App() {
   };
 
   const callSurveyAPI = () => {
-    fetch("/survey?q=reactjs")
+    fetch("https://www.stackoverflow.com/survey?q=reactjs")
       .then((resp) => {
         setData(resp);
         console.log(resp);
@@ -34,8 +34,7 @@ function App() {
 
   return (
     <div key={data}>
-      <h1>Valid Request</h1>
-
+      <h1>Invalid Request</h1>
       <button onClick={callSearchAPI}>Call Search API</button>
       <button onClick={callSurveyAPI}>Call Survey API</button>
 
@@ -44,4 +43,4 @@ function App() {
   );
 }
 
-export default App;
+export default Test;
