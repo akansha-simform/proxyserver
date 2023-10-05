@@ -12,5 +12,5 @@ const proxy2 = {
 
 module.exports = function (app) {
   app.use("/search", createProxyMiddleware(proxy));
-  app.use("/survey", createProxyMiddleware(proxy2));
+  app.use("/tags", createProxyMiddleware(proxy2));
 };
