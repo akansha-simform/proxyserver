@@ -53,7 +53,7 @@ function App() {
       <br />
       <h1>Valid Request</h1>
       <button onClick={callSearchAPI}>Call Search API</button>
-      <button onClick={callTagAPI}>Call Tags API</button>
+      {/* <button onClick={callTagAPI}>Call Tags API</button> */}
 
       <pre>{JSON.stringify(data?.url)}</pre>
     </div>
